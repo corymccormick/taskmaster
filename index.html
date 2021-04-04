@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+    <title>taskmaster</title>
+</head>
+
+<body>
+    <header class="container-fluid">
+        <div class="row bg-white">
+            <div class="col text-center">
+                <h1>Task Master</h1>
+            </div>
+        </div>
+    </header>
+    <main class="container-fluid">
+        <div class="row pxy-5">
+            <div class="col">
+                <form class="form-inline bg-white rounded p-3" onsubmit="app.listsController.addList()">
+                    <div>
+                        <input type="text" name="title" id="name" class="form-control" placeholder="List Name..."
+                            aria-describedby="helpId" required minlength="3" maxlength="15">
+                    </div>
+                    <div class="ml-3">
+                        <!-- add in colors -->
+                        <select class="custom-select" id="color" aria-label="color select" required>
+                            <option value="">green</option>
+                            <option value="">blue</option>
+                            <option value="">red</option>
+                            <option value="">yellow</option>
+                            <option selected value="">purple</option>
+                        </select>
+                        <button type="submit" class=" form-control btn btn-gray ml-2">Create</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+
+        <div class="row" id="app"></div>
+    </main>
+    <footer class="container-fluid bg-dark text-light">
+        <div class="row text-center">
+            <div class="col">
+            </div>
+        </div>
+    </footer>
+
+    <script src="app/main.js" type="module"></script>
+</body>
+
+</html>

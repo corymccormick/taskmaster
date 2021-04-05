@@ -10,18 +10,19 @@ export default class List {
 
   get Template() {
     return `
-     <div class="col-3 d-flex mb-3">
+     <div class="col-3 d-flex mt-5 mb-3">
     <div class="card shadow">
-    <h4 class="card-header card-title text-center bg-success m-0 p-3">${this.title} </h4>
-        <div class="card-body ">
-            <i class="fas fa-times ml-2" onclick="app.listsController.deleteList('${this.id}')"></i>
-          </div>
-            <p class="card-text"></p>
-             <div class="p-3">
-            <ul class="d-flex flex-column">
-                ${this.Items}
-            </ul>
-        </div>
+    <div class="card-header card-title text-center text-light bg-success m-0 p-3">
+    <i class="fas fa-times text-dark" onclick="app.listsController.deleteList('${this.id}')"></i> 
+     <h4>${this.title}</h4>
+     </div>
+    <div class="card-body">
+    <div class="p-1">
+    <ul class="a">
+    ${this.Items}
+    </ul>
+    </div>
+    </div>
             <form class="d-flex p-2" onsubmit="app.itemsController.addItem('${this.id}')">
             <input type="text" name="description" class="form-control" placeholder="Add Item...."
                    aria-describedby="helpId" minlength="3" maxlength="50">

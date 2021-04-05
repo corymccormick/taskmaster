@@ -16,7 +16,7 @@
 
 <body>
     <header class="container-fluid">
-        <div class="row bg-white">
+        <div class="row">
             <div class="col text-center">
                 <h1>Task Master</h1>
             </div>
@@ -24,27 +24,28 @@
     </header>
     <main class="container-fluid">
         <div class="row pxy-5">
-            <div class="col">
-                <form class="form-inline bg-white rounded p-3" onsubmit="app.listsController.addList()">
+            <div class="col-6">
+                <form class="form-inline rounded p-3" onsubmit="app.listsController.addList()">
                     <div>
                         <input type="text" name="title" id="name" class="form-control" placeholder="List Name..."
                             aria-describedby="helpId" required minlength="3" maxlength="15">
                     </div>
+                    <!-- add in colors -->
                     <div class="ml-3">
-                        <!-- add in colors -->
-                        <select class="custom-select" id="color" aria-label="color select" required>
+                        <select type="color" class="custom-select" id="color" aria-label="color select" required>
                             <option value="">green</option>
                             <option value="">blue</option>
                             <option value="">red</option>
                             <option value="">yellow</option>
                             <option selected value="">purple</option>
                         </select>
-                        <button type="submit" class=" form-control btn btn-gray ml-2">Create</button>
+                        <button type="submit" class=" form-control btn btn-secondary ml-2">Create</button>
                     </div>
                 </form>
             </div>
         </div>
 
+        <!-- <input type="color" name="color" id="ListId" aria-label="select color" required> -->
 
 
 

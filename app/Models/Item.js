@@ -4,6 +4,7 @@ export default class Item {
     this.id = id
     this.description = description
     this.listId = listId
+    // checkboxes checked
     this.complete = false
 
   }

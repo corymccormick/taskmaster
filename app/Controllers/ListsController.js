@@ -33,7 +33,10 @@ export default class ListsController {
   }
 
   deleteList(id) {
-    listsService.deleteList(id)
+    var result = confirm("Delete");
+    if (result == true) {
+      listsService.deleteList(id)
+    }
   }
 }
 

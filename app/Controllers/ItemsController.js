@@ -16,11 +16,14 @@ export default class ItemsController {
     itemsService.addItem(createItem)
     // @ts-ignore
     form.reset()
+    saveState()
 
   }
 
   deleteItem(id) {
-    itemsService.deleteItem(id)
+    var result = confirm("Delete");
+    if (result == true) {
+      itemsService.deleteItem(id)
+    }
   }
-
 }

@@ -10,7 +10,7 @@ class ListsService {
 
 
   addList(newList) {
-    ProxyState.lists = [...ProxyState.lists, new List(newList.title, newList.quantity)]
+    ProxyState.lists = [...ProxyState.lists, new List(newList.title)]
     saveState()
   }
 }

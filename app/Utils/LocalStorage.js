@@ -16,7 +16,7 @@ export function loadState() {
 
   if (data) {
     if (data.hasOwnProperty('lists')) {
-      ProxyState.lists = data.lists.map(list => new List(list.title, list.addItem, list.id));
+      ProxyState.lists = data.lists.map(list => new List(list.title, list.color, list.addItem, list.id));
     }
     if (data.hasOwnProperty('items')) {
       ProxyState.items = data.items.map(item => new Item(item.description, item.listId, item.id));

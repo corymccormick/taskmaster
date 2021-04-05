@@ -2,16 +2,17 @@ import { generateId } from '../Utils/GenerateId.js'
 import { ProxyState } from '../AppState.js'
 
 export default class List {
-  constructor(title, id = generateId()) {
+  constructor(title, color, id = generateId()) {
     this.id = id
     this.title = title
+    this.color = color
   }
 
   get Template() {
     return `
      <div class="col-3 d-flex mt-5 mb-3">
     <div class="card shadow">
-    <div class="card-header text-left text-light bg-success m-0 p-3">
+    <div class="card-header text-left text-light m-0 p-3" style="background-color: ${this.color}">
     <i class="fas fa-times text-dark float-right" onclick="app.listsController.deleteList('${this.id}')"></i> 
      <h4>${this.title}</h4>
      ${this.uncompleteCount}/${this.itemCount}
@@ -49,5 +50,6 @@ export default class List {
     let it = ProxyState.items.filter(i => i.listId === this.id && !i.complete)
     return it.length
   }
+
 }
 

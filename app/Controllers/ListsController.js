@@ -1,5 +1,5 @@
 import { ProxyState } from "../AppState.js";
-import { listsService } from "../Services/ListsService.js";
+import { listsService } from "../Services/LIstsService.js";
 import { loadState, saveState } from "../Utils/LocalStorage.js";
 
 
@@ -26,7 +26,10 @@ export default class ListsController {
     let form = window.event.target
     let createList = {
       title: form['title'].value,
+      color: form['color'].value,
     }
+    console.log(createList)
+    debugger
     listsService.addList(createList)
     // @ts-ignore
     form.reset()

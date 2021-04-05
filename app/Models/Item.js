@@ -13,7 +13,7 @@ export default class Item {
     return `
     <div class="form-check">
     <li>
-    <input class="form-check-input" type="checkbox" value="${this.complete}" id="">
+    <input class="form-check-input" type="checkbox" value="${this.complete}" id="" checked>
     <label class="form-check-label">
      ${this.description}
      </label>
